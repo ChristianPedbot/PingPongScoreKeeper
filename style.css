@@ -1,0 +1,73 @@
+#title{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#score1, #score2, #x {
+    display: inline-block;
+    margin-right: 20px; 
+    top: 50%;
+    left: 50%;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgb(243, 241, 241);
+}
+
+.container2{
+    text-align: center;
+}
+
+
+.scores{
+    margin-left: 100px;
+    
+}
+
+body {
+    background-image: url(images/table-tennis.webp);
+    background-size: cover;
+}
+
+.tela{
+    border-radius: 10px;
+    background-color: rgb(237, 237, 247);
+    width: 310px;
+    height: 70px;
+}
+
+#btn1{
+    background-color: rgb(98, 255, 67);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#btn2{
+    background-color: rgb(224, 67, 255);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#reset{
+    background-color: rgb(255, 67, 67);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#select {
+    border-radius: 15px;
+    background-color: white;
+    
+}
