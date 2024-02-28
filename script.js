@@ -7,7 +7,7 @@ const reset = document.getElementById("reset");
 const winner = document.getElementById("winner");
 const newOptionInput = document.getElementById("customPointLimit");
 const newOption = document.createElement("option");
-const btnOption = document.getElementById("addOption")
+const btnOption = document.getElementById("addOption");
 
 function endGame() {
     const option = parseInt(select.value);
@@ -53,7 +53,6 @@ btnTwo.onclick = function () {
     endGame();
 }
 
-
 reset.onclick = function () {
     countOne = 0;
     countTwo = 0;
@@ -61,7 +60,7 @@ reset.onclick = function () {
     scoreTwo.innerHTML = countTwo;
     scoreOne.style.color = "black";
     scoreTwo.style.color = "black";
-    enable()
+    enable();
     select.disabled = false;
     winner.innerText = "";
 }
