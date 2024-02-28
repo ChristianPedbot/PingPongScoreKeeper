@@ -68,15 +68,18 @@ reset.onclick = function () {
 btnOption.onclick = function () {
     const newOptionValue = newOptionInput.value;
     if (newOptionValue !== "") {
-        if (newOptionValue.length <= 5){
+        if (newOptionValue.length <= 4){
             newOption.value = newOptionValue;
             newOption.textContent = newOptionValue;
             select.appendChild(newOption);
             newOptionInput.value = "";
         } 
+        else {
             alert("Very great value! Enter a smaller number");
-            return;
+        }
     } 
+    else {
         alert("Enter a valid value for the new limit point.");
-        return;
-};
+    }
+
+}
