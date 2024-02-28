@@ -1,46 +1,64 @@
-let select = document.getElementById("select");
-function endgame() {
-    let option = parseInt(select.value);
-    if (count1 === option) {
-        score1.style.color = "green";
-        score2.style.color = "red";
-        btn1.disabled = true;
-        btn2.disabled = true;
+const select = document.getElementById("select");
+const btnOne = document.getElementById("btnOne");
+const scoreOne = document.getElementById("scoreOne");
+const btnTwo = document.getElementById("btnTwo");
+const scoreTwo = document.getElementById("scoreTwo");
+const reset = document.getElementById("reset");
+const winner = document.getElementById("winner");
+
+function endGame() {
+    const option = parseInt(select.value);
+    if (countOne === option) {
+        scoreOne.style.color = "green";
+        scoreTwo.style.color = "red";
+        disable();
+        const playerOne = "Player 1 WINNER";
+        winner.innerText = playerOne;
     } 
-    else if (count2 === option) {
-        score2.style.color = "green";
-        score1.style.color = "red";
-        btn1.disabled = true;
-        btn2.disabled = true;
+    else if (countTwo === option) {
+        scoreTwo.style.color = "green";
+        scoreOne.style.color = "red";
+        disable();
+        const playerTwo = "Player 2 WINNER";
+        winner.innerText = playerTwo;
     }
 }
 
-let count1 = 0;
-let btn1 = document.getElementById("btn1");
-let score1 = document.getElementById("score1");
-btn1.onclick = function () {
-    count1++;
-    score1.innerHTML = count1;
-    endgame();
+function enable(){
+    btnOne.disabled = false;
+    btnTwo.disabled = false;
 }
 
-let count2 = 0;
-let btn2 = document.getElementById("btn2");
-let score2 = document.getElementById("score2");
-btn2.onclick = function () {
-    count2++;
-    score2.innerHTML = count2;
-    endgame();
+function disable(){
+    btnOne.disabled = true;
+    btnTwo.disabled = true;
 }
 
-let reset = document.getElementById("reset");
+let countOne = 0;
+btnOne.onclick = function () {
+    countOne++;
+    scoreOne.innerHTML = countOne;
+    select.disabled = true;
+    endGame();
+}
+
+let countTwo = 0;
+btnTwo.onclick = function () {
+    countTwo++;
+    scoreTwo.innerHTML = countTwo;
+    select.disabled = true;
+    endGame();
+}
+
+
 reset.onclick = function () {
-    count1 = 0;
-    count2 = 0;
-    score1.innerHTML = count1;
-    score2.innerHTML = count2;
-    score1.style.color = "black";
-    score2.style.color = "black";
-    btn1.disabled = false;
-    btn2.disabled = false;
+    countOne = 0;
+    countTwo = 0;
+    scoreOne.innerHTML = countOne;
+    scoreTwo.innerHTML = countTwo;
+    scoreOne.style.color = "black";
+    scoreTwo.style.color = "black";
+    enable()
+    select.disabled = false;
+    winner.innerText = "";
 }

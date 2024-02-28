@@ -4,37 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ping Pong Score Keeper</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+    <h1 id="winner"></h1>
     <div class="container">
         <h1 id="title">Ping Pong <br>Score Keeper</h1>
-        <div class="tela">
+        <div class="screen">
             <div class="scores">
-                <h1 id="score1">0</h1>
-                <h1 id ="x">X</h1>
-                <h1 id="score2">0</h1>
-                <br>
+                <h1 id="scoreOne">0</h1>
+                <h1 id ="versus">X</h1>
+                <h1 id="scoreTwo">0</h1>
             </div>
         </div>
-
-        <br>
-
-        <div class="container2">
+        <div class="containerSelect">
         <label>Point Limit: </label>
         <select id="select">
             <option value="5">5</option>
             <option value="7">7</option>
             <option value="10">10</option>
         </select>
-        <br>
+        
         </div>
-
-        <br>
-        <button id="btn1">+1 Player 1</button>
-        <button id="btn2">+1 Player 2</button>
-        <button id="reset">Reset Game</button>
-    </div>
+        <button class=button id="btnOne">+1 Player 1</button>
+        <button class=button id="btnTwo">+1 Player 2</button>
+        <button class=button id="reset">Reset Game</button>
+    </div>   
     
     <script type="text/javascript" src="script.js"></script>
 </body>
