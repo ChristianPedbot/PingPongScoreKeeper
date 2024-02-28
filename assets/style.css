@@ -33,7 +33,7 @@
 
 
 .scores{
-    margin-left: 100px;
+    margin-left: 150px;
     
 }
 
@@ -46,14 +46,14 @@ body {
 .screen{
     border-radius: 10px;
     background-color: rgb(237, 237, 247);
-    width: 310px;
+    width: 400px;
     height: 70px;
     margin-bottom: 20px;
 }
 
 .button{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: medium;
+    font-size: large;
     border-radius: 15px;
     cursor: pointer;
 }
@@ -77,4 +77,17 @@ body {
     background-color: white;
     margin-bottom: 20px;
     
+}
+
+#custon {
+    display: none;
+}
+
+.containerButtons{
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.containerInput{
+    margin-left: 15px;
 }

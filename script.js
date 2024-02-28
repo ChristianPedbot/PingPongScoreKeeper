@@ -5,6 +5,9 @@ const btnTwo = document.getElementById("btnTwo");
 const scoreTwo = document.getElementById("scoreTwo");
 const reset = document.getElementById("reset");
 const winner = document.getElementById("winner");
+const newOptionInput = document.getElementById("customPointLimit");
+const newOption = document.createElement("option");
+const btnOption = document.getElementById("addOption")
 
 function endGame() {
     const option = parseInt(select.value);
@@ -50,6 +53,7 @@ btnTwo.onclick = function () {
     endGame();
 }
 
+
 reset.onclick = function () {
     countOne = 0;
     countTwo = 0;
@@ -61,3 +65,15 @@ reset.onclick = function () {
     select.disabled = false;
     winner.innerText = "";
 }
+
+btnOption.onclick = function () {
+    const newOptionValue = newOptionInput.value;
+    if (newOptionValue !== "") {
+        newOption.value = newOptionValue;
+        newOption.textContent = newOptionValue;
+        select.appendChild(newOption);
+        newOptionInput.value = "";
+    } else {
+        alert("Please enter a value for the new limit point.");
+    }
+};
