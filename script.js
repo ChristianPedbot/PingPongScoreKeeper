@@ -69,11 +69,15 @@ reset.onclick = function () {
 btnOption.onclick = function () {
     const newOptionValue = newOptionInput.value;
     if (newOptionValue !== "") {
-        newOption.value = newOptionValue;
-        newOption.textContent = newOptionValue;
-        select.appendChild(newOption);
-        newOptionInput.value = "";
-    } else {
-        alert("Please enter a value for the new limit point.");
-    }
+        if (newOptionValue.length <= 5){
+            newOption.value = newOptionValue;
+            newOption.textContent = newOptionValue;
+            select.appendChild(newOption);
+            newOptionInput.value = "";
+        } 
+            alert("Very great value! Enter a smaller number");
+            return
+    } 
+        alert("Enter a valid value for the new limit point.");
+        return
 };
