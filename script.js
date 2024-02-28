@@ -50,7 +50,6 @@ btnTwo.onclick = function () {
     endGame();
 }
 
-
 reset.onclick = function () {
     countOne = 0;
     countTwo = 0;
