@@ -68,14 +68,14 @@ reset.onclick = function () {
 btnOption.onclick = function () {
     const newOptionValue = newOptionInput.value;
     if (newOptionValue !== "") {
-        if (newOptionValue.length <= 4){
+        if (newOptionValue.length <= 4 && newOptionValue >= 0){
             newOption.value = newOptionValue;
             newOption.textContent = newOptionValue;
             select.appendChild(newOption);
             newOptionInput.value = "";
         } 
         else {
-            alert("Very great value! Enter a smaller number");
+            alert("We do not accept this value, enter another one!");
         }
     } 
     else {
