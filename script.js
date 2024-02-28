@@ -76,8 +76,8 @@ btnOption.onclick = function () {
             newOptionInput.value = "";
         } 
             alert("Very great value! Enter a smaller number");
-            return
+            return;
     } 
         alert("Enter a valid value for the new limit point.");
-        return
+        return;
 };
