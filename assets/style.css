@@ -12,6 +12,12 @@
     z-index: 1
 }
 
+@media only screen and (max-width: 768px) {
+    #winner {
+        font-size: 6vw; 
+    }
+}
+
 #scoreOne, #scoreTwo, #versus {
     display: inline-block;
     margin-right: 20px; 
