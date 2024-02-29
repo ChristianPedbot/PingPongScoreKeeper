@@ -97,21 +97,19 @@ btnOption.onclick = function () {
             select.appendChild(newOption);
             newOptionInput.value = "";
         } 
-        else {
             error.innerText = errorVal;
             reset.disabled = true;
             disable();
             disableCustom();
             showError();
-        }
+            return;
     } 
-    else {
         error.innerText = errorLimit;
         showError();
         reset.disabled = true;
         disable();
         disableCustom();
-    }
+        return;
 }
 
 btnError.onclick = function () {
