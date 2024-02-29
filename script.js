@@ -96,20 +96,20 @@ btnOption.onclick = function () {
             newOption.textContent = newOptionValue;
             select.appendChild(newOption);
             newOptionInput.value = "";
-        } 
-            error.innerText = errorVal;
-            reset.disabled = true;
-            disable();
-            disableCustom();
-            showError();
             return;
-    } 
-        error.innerText = errorLimit;
-        showError();
+        } 
+        error.innerText = errorVal;
         reset.disabled = true;
         disable();
         disableCustom();
+        showError();
         return;
+    } 
+    error.innerText = errorLimit;
+    showError();
+    reset.disabled = true;
+    disable();
+    disableCustom();
 }
 
 btnError.onclick = function () {
