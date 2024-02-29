@@ -28,6 +28,7 @@
     padding: 15px;
     background-color: rgb(243, 241, 241);
     z-index: 2;
+    border: double;
 }
 
 .containerSelect{
@@ -67,6 +68,7 @@ body {
     font-size: large;
     border-radius: 15px;
     cursor: pointer;
+    border: ridge;
 }
 
 
@@ -105,27 +107,32 @@ body {
 
 .containerError{
     position: absolute;
-    top: 75%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%,-50%);
     border-radius: 15px;
     padding: 15px;
     background-color: rgba(255, 255,255,0.5);
     z-index: 2;
+    max-width: 80%;
     display: none;
     width: auto;
+    box-sizing: border-box;
 }
 
-#error, #btnError{
-    display: inline-block;
-}
-
-#btnError{
-    background-color: red;
+#btnError {
+    position: absolute;
+    top: 4px;
+    right: 5px; 
+    background-color: rgba(255, 255, 255, 0.5);
     color: white;
     padding: 5px;
     border-radius: 50%;
     cursor: pointer;
-    margin-right: 10px;
-    margin-left: 5px;
+    border: none;
+}
+
+#error{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
