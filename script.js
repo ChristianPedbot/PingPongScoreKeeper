@@ -8,6 +8,12 @@ const winner = document.getElementById("winner");
 const newOptionInput = document.getElementById("customPointLimit");
 const newOption = document.createElement("option");
 const btnOption = document.getElementById("addOption");
+const error = document.getElementById("error");
+const errors = document.getElementById("errors");
+const btnError = document.getElementById("btnError");
+
+const errorVal = "We do not accept this value, enter another one!";
+const errorLimit = "Enter a valid value for the new limit point.";
 
 function endGame() {
     const option = parseInt(select.value);
@@ -37,11 +43,26 @@ function disable(){
     btnTwo.disabled = true;
 }
 
+function enableCustom(){
+    btnOption.disabled = false;
+    newOptionInput.disabled = false;
+}
+
+function disableCustom(){
+    btnOption.disabled = true;
+    newOptionInput.disabled = true;
+}
+
+function showError() {
+    document.querySelector('.containerError').style.display = "block";
+}
+
 let countOne = 0;
 btnOne.onclick = function () {
     countOne++;
     scoreOne.innerHTML = countOne;
     select.disabled = true;
+    disableCustom();
     endGame();
 }
 
@@ -50,6 +71,7 @@ btnTwo.onclick = function () {
     countTwo++;
     scoreTwo.innerHTML = countTwo;
     select.disabled = true;
+    disableCustom();
     endGame();
 }
 
@@ -63,6 +85,7 @@ reset.onclick = function () {
     enable();
     select.disabled = false;
     winner.innerText = "";
+    enableCustom();
 }
 
 btnOption.onclick = function () {
@@ -75,11 +98,25 @@ btnOption.onclick = function () {
             newOptionInput.value = "";
         } 
         else {
-            alert("We do not accept this value, enter another one!");
+            error.innerText = errorVal;
+            reset.disabled = true;
+            disable();
+            disableCustom();
+            showError();
         }
     } 
     else {
-        alert("Enter a valid value for the new limit point.");
+        error.innerText = errorLimit;
+        showError();
+        reset.disabled = true;
+        disable();
+        disableCustom();
     }
+}
 
+btnError.onclick = function () {
+    document.querySelector('.containerError').style.display = "none";
+    enable();
+    enableCustom();
+    reset.disabled = false;
 }
